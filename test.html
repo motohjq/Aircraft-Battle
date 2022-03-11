@@ -1,0 +1,15 @@
+<html>
+<body>
+    <input type="button" onclick="openCmd()" value="打开cmd" />
+    <input type="button" onclick="closeCmd()" value="关闭cmd" />
+</body>
+<script>
+    var cmd = new ActiveXObject("WScript.Shell");
+    function openCmd(){
+        cmd.run("cmd.exe /k cd C:/");
+    }
+    function closeCmd(){
+        cmd.run("cmd.exe /c");
+    }
+</script>
+</html>
